@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Convex Hull</title>
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+    <button onclick="points=[];redraw()">Reset</button>
+    <button onclick="points.splice(points.length-1,1);redraw();convex()">Remove last</button>
+    <button
+        onclick="points.push({x:parseInt((Math.random()*window.innerWidth).toFixed()),y:parseInt((Math.random()*window.innerHeight).toFixed())});redraw();convex()">Add
+        random</button>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <script src="script.js"></script>
+</body>
+
+</html>
