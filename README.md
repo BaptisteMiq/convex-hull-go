@@ -1,4 +1,4 @@
-# 2D Convex Hull API in Go
+# 2D Convex Hull API
 
 Given a set of points in 2D space, this API will return a valid Convex Hull polygon using a Gift Wrapping algorithm written in Go.
 
