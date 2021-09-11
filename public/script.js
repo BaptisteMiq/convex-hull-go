@@ -15,11 +15,8 @@ const redraw = () => {
         ctx.arc(p.x, p.y, 5, 0, Math.PI * 2);
         ctx.fill();
     });
-}
-redraw();
-
-const convex = () => {
-    if(points.length >= 3) {
+    // Get Convex Hull
+    if (points.length >= 3) {
         fetch("/convex2d", {
             method: "POST",
             body: JSON.stringify({ points }),
@@ -35,19 +32,14 @@ const convex = () => {
             ctx.stroke();
         });
     }
-}
+};
+redraw();
 
 // Update canvas to fit window size
-window.addEventListener("resize", function () {
-    redraw();
-    convex();
-});
+window.addEventListener("resize", redraw);
 
 // Draw point on click on canvas and get convex hull
-canvas.addEventListener("click", function (e) {
-    const x = e.pageX - this.offsetLeft;
-    const y = e.pageY - this.offsetTop;
-    points.push({ x, y });
+canvas.addEventListener("click", (e) => {
+    points.push({ x: e.clientX, y: e.clientY })
     redraw();
-    convex();
 });

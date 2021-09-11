@@ -11,7 +11,7 @@ More informations on [Wikipedia](https://en.wikipedia.org/wiki/Convex_hull).
 
 ## Why
 
-Convex Hull is often used in [video games](https://www.cs.sfu.ca/~haoz/pubs/liu_zhang_gi08.pdf), allowing to find simple collision polygon from complex shapes (see bellow sprite). This optimization allows to use [simpler and faster algorithms](https://www.toptal.com/game/video-game-physics-part-ii-collision-detection-for-solid-objects) without impacting user experience.
+Convex Hull is often used in [video games](https://www.cs.sfu.ca/~haoz/pubs/liu_zhang_gi08.pdf), allowing to find simple collision polygon from complex shapes (see below sprite). This optimization allows to use [simpler and faster algorithms](https://www.toptal.com/game/video-game-physics-part-ii-collision-detection-for-solid-objects) without impacting user experience.
 
 Furthermore, convex polygons are in some cases a good compromise between collision box simplicity and [collision mesh](https://developer.valvesoftware.com/wiki/Collision_mesh) accuracy.
 
@@ -19,7 +19,7 @@ Furthermore, convex polygons are in some cases a good compromise between collisi
 
 *Original sprite from [LuizMelo](https://luizmelo.itch.io/), The Convex Hull is drawn in red, it can be used as a collision polygon.*
 
-Finding such polygon can be usefull in other fields like [shape analysis](https://brilliant.org/wiki/convex-hull/), [linear programming](https://cs.au.dk/~gerth/advising/thesis/bo-mortensen.pdf) and even in [cooking](http://veronising.blogspot.com/2008/04/cooking-for-nerds-ingredient-polyhedron.html). 
+Finding such polygon can be usefull in other fields like [shape analysis](https://brilliant.org/wiki/convex-hull/), [linear programming](https://cs.au.dk/~gerth/advising/thesis/bo-mortensen.pdf) and even [cooking](http://veronising.blogspot.com/2008/04/cooking-for-nerds-ingredient-polyhedron.html). 
 
 Here are other usefull links to learn more about applications of Convex Hull:
 
@@ -29,23 +29,23 @@ Here are other usefull links to learn more about applications of Convex Hull:
 
 ## How
 
-There are multiple algorithms to determine a convex hull, the one that I used in this program is the [Gift Wrapping algorithm](https://en.wikipedia.org/wiki/Gift_wrapping_algorithm), which as a time complexity of `O(mn)`. Other algorithms can be found on [this great pdf](https://www.cs.jhu.edu/~misha/Spring16/06.pdf).
+There are multiple algorithms to determine a convex hull, the one I used in this program is the [Gift Wrapping algorithm](https://en.wikipedia.org/wiki/Gift_wrapping_algorithm), whose time complexity is `O(mn)`. Other algorithms can be found on [this excellent pdf](https://www.cs.jhu.edu/~misha/Spring16/06.pdf).
 
 ### Example
 
-For this example, we suppose that points are not collinear. I'll not detail maths here, but you can find more details on the code itself, on the [Wikipedia page](https://en.wikipedia.org/wiki/Convex_hull) and on this [video](https://youtu.be/YNyULRrydVI).
+For this example, we assume that the points are not collinear. I'm not going to detail the math here, but you can find more details on the code itself, on the [Wikipedia page](https://en.wikipedia.org/wiki/Convex_hull) and on this [video](https://youtu.be/YNyULRrydVI).
 
-I made a tool to have a visual representation of the algorithm (you can find it inside the `/public` folder). Bellow screenshots have been taken from this tool.
+I made a tool to have a visual representation of the algorithm (you can find it in the `/public` folder). The screenshots below were taken from this tool.
 
 Given this set of points:
 
 ![Step 0](https://i.imgur.com/A8VCrml.png)
 
-The algorithm will first take the left-most point (point with minimum x value):
+The algorithm will first take the leftmost point (point with minimal x-value):
 
 ![Step 1](https://i.imgur.com/f0VCoH9.png)
 
-Then rotate an imaginary line around it until it crosses another point:
+Then rotate an imaginary line around this point until it crosses another point:
 
 ![Step 2](https://i.imgur.com/lZOqdeV.png)
 
@@ -90,7 +90,7 @@ The API returns:
 
 ## How to start the application
 
-If you want to test the API and the tool delivered with it, there are two built version that you can run: one Linux and one Windows version. You can run executables without any requirement, therefore you do **not** need Go to be installed.
+If you want to test the API and the tool that comes with it, there are two built version that you can run: one Linux and one Windows version. You can run executables without any requirement, therefore you do **not** need Go to be installed.
 
 The application will start the API on port 8080, and will close it when the application is terminated.
 
@@ -152,6 +152,6 @@ Click on the canvas to add a point at mouse position. The API will be called aut
 
 ![GIF demo of the tool](https://media.giphy.com/media/RyWpwFci7Xn8Wfuhgd/giphy.gif?cid=790b7611eb2a149d17487521cf0772fb9951650d861fed2d&rid=giphy.gif&ct=g)
 
-## License
+## Author
 
-This program was made by Baptiste Miquel under the MIT license.
+Made by Baptiste Miquel under the MIT license.
