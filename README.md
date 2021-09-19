@@ -90,7 +90,7 @@ The API returns:
 
 ## How to start the application
 
-If you want to test the API and the tool that comes with it, there are two built version that you can run: one Linux and one Windows version. You can run executables without any requirement, therefore you do **not** need Go to be installed.
+If you want to test the API and the tool that comes with it, there are two built versions that you can run: one Linux and one Windows version. You can run executables without any requirement, therefore you do **not** need Go to be installed.
 
 The application will start the API on port 8080, and will close it when the application is terminated.
 
@@ -120,15 +120,12 @@ Download ZIP and start `convex-hull.exe`.
 You will first need to clone the repository:
 
 ```bash
-https://github.com/BaptisteMiq/convex-hull-go.git
+git clone https://github.com/BaptisteMiq/convex-hull-go.git
 cd convex-hull-go
 ```
 
 Then install the required Go package (gin):
 ```bash
-# You might need this library
-sudo apt-get install libxi-dev
-
 go get .
 ```
 
